@@ -1,8 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-    @include('users.users', ['users' => $users])
-@endsection
 
 @if (count($users) > 0)
     <ul class="media-list">
