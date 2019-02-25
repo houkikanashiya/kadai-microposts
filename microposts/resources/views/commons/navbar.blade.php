@@ -14,9 +14,13 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu">
-                                
+                               
+                                <li>{!! link_to_route('users.show', 'My profile', ['id' => Auth::id()]) !!}</li>
+                                <li role="separator" class="divider"></li>
+                                <li>{!! link_to_route('favorites.favorite_show', 'Favorite', ['id' => Auth::id()]) !!}</li>
                                 <li role="separator" class="divider"></li>
                                 <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
+                            
                         </ul>
                     </li>
                 @else
